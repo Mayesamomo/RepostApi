@@ -8,7 +8,6 @@ package REST;
 import DAO.PostDAO;
 import DAO.PostInterface;
 import DTO.Post;
-import DTO.User;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -50,6 +49,7 @@ public class PostResource {
     @GET
     @Path("/ActivePosts")
     @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
     public List<Post> getActivePosts() {
         List<Post> posts = postDB.getAllActivePosts();
         if (posts == null || posts.isEmpty()) {
