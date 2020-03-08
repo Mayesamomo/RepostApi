@@ -13,6 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -37,6 +40,8 @@ import org.json.simple.parser.JSONParser;
 public class UserResource {
 
     @Context
+    private HttpServletRequest request;
+   
     private UriInfo context;
     private final UserInterface db = UserDAO.getInstance();
     private User u = new User();
@@ -161,18 +166,22 @@ public class UserResource {
     @POST
     @Path("/Login")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     //@Produces(MediaType.TEXT_PLAIN)
     public Response Login(User us) {
         //u = convertJsonStringToLogin(content);
         if (us.getUsername() == null && us.getPassword() == null) {
+           request.getSession(false);
             return Response.status(400).entity("Please enter username and password !!").build();
-
+             
         }
         if (!db.login(us.getUsername(), us.getPassword())) {
+             request.getSession(false);
             return Response.status(401).entity("wrong username or password !!").build();
         } else {
             db.login(us.getUsername(), us.getPassword());
+            request.setAttribute("username", u.getUsername());
+            request.getSession(true);
             return Response.status(200).entity("Logged In!").build();
         }
     }
