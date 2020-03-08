@@ -8,6 +8,7 @@ package REST;
 import DAO.UserDAO;
 import DAO.UserInterface;
 import DTO.User;
+import java.util.Base64;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,7 +42,11 @@ public class UserResource {
 
     @Context
     private HttpServletRequest request;
-   
+    private String authHeader = request.getHeader("authorization");
+    private String encodedAuth = authHeader.substring(authHeader.indexOf(' ') + 1);
+    private String decodedAuth = new String(Base64.getDecoder().decode(encodedAuth));
+    private String username = decodedAuth.substring(0, decodedAuth.indexOf(':'));
+    private String password = decodedAuth.substring(decodedAuth.indexOf(':') + 1);
     private UriInfo context;
     private final UserInterface db = UserDAO.getInstance();
     private User u = new User();
@@ -145,8 +150,9 @@ public class UserResource {
             return Response.status(200).entity("details updated!").build();
         }
     }
+
     //get a details with username
-  @PermitAll
+    @PermitAll
     @GET
     @Path("{Id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -162,7 +168,8 @@ public class UserResource {
         }
 
     }
-  @PermitAll
+
+    @PermitAll
     @POST
     @Path("/Login")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -171,15 +178,18 @@ public class UserResource {
     public Response Login(User us) {
         //u = convertJsonStringToLogin(content);
         if (us.getUsername() == null && us.getPassword() == null) {
-           request.getSession(false);
-            return Response.status(400).entity("Please enter username and password !!").build();
-             
+            request.getSession(false);
+            //return Response.status(400).entity("Please enter username and password !!").build();
+            Response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+		return;
+
         }
         if (!db.login(us.getUsername(), us.getPassword())) {
-             request.getSession(false);
+            request.getSession(false);
             return Response.status(401).entity("wrong username or password !!").build();
         } else {
             db.login(us.getUsername(), us.getPassword());
+            request.getHeader("Autorization");
             request.setAttribute("username", u.getUsername());
             request.getSession(true);
             return Response.status(200).entity("Logged In!").build();
