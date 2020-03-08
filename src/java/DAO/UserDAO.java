@@ -278,11 +278,13 @@ public class UserDAO extends DAO implements UserInterface {
     }
 
     public static void main(String[] args) {
+         ///User us = new User("Khlaus Michaelson","Khlaus","khlaus@gmail.com","password");
         UserDAO dao = new UserDAO();
         String username = "modric";
         String email = "animegang@gmail.com";
         String password = "password";
-        System.out.println(dao.checkIfExist(username, email));
+        
+       // System.out.println(dao.register(us));
 
     }
 }

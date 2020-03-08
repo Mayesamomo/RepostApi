@@ -8,10 +8,11 @@ package REST;
 import DAO.UserDAO;
 import DAO.UserInterface;
 import DTO.User;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -25,13 +26,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  * REST Web Service
  *
  * @author micha
  */
+@RolesAllowed({"USER", "MODERATOR", "ADMIN"})
 @Path("User")
 public class UserResource {
 
@@ -48,8 +49,9 @@ public class UserResource {
      */
     public UserResource() {
     }
+
     //conver user Object to JSON Object
- private JSONObject convertUserToJson(User u) {
+    private JSONObject convertUserToJson(User u) {
         JSONObject jObj = new JSONObject();
         jObj.put("user_id", u.getId());
         jObj.put("fullName", u.getFullName());
@@ -61,9 +63,8 @@ public class UserResource {
         jObj.put("date", u.getDate());
         return jObj;
     }
- 
 
- private User convertJsonStringToLogin(String log) throws org.json.simple.parser.ParseException {
+    private User convertJsonStringToLogin(String log) throws org.json.simple.parser.ParseException {
         User users = null;
         JSONParser parser = new JSONParser();
         JSONObject obj = (JSONObject) parser.parse(log);
@@ -72,9 +73,10 @@ public class UserResource {
         users.setUsername((String) obj.get("user_name"));
         users.setPassword((String) obj.get("password")); //password must not be return
         return u;
-        
+
     }
- //convert JSON Object to User object
+    //convert JSON Object to User object
+
     private User convertJsonStringToUser(String jsonString) {
         User users = null;
         users = new User();
@@ -98,20 +100,21 @@ public class UserResource {
         // u.setStatus(status);
         return u;
     }
+
     /**
      * Retrieves representation of an instance of REST.UserResource
      *
      * @return an instance of java.lang.String
      */
-   //get all users, only accessible by Admin
-    //@RolesAllowed("ADMIN")
+    //get all users, only accessible by Admin
+    @RolesAllowed("ADMIN")
     @GET
     @Path("/AllUsers")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> getUsers() {
-       List<User> users = db.getAllUsers();
+        List<User> users = db.getAllUsers();
         if (users == null || users.isEmpty()) {
-              return (List<User>) Response.status(204).entity("no user found in the database!").build();
+            return (List<User>) Response.status(204).entity("no user found in the database!").build();
         }
         //return list of users
         return db.getAllUsers();
@@ -121,23 +124,24 @@ public class UserResource {
      * PUT method for updating or creating an instance of UserResource
      *
      * @param users
-     * @return 
+     * @return
      */
     @PUT
-     //@Path("/updateUser")
+    //@Path("/updateUser")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response  updateUser(User users) {
+    public Response updateUser(User users) {
         System.out.println(users);
-       if (!db.checkIfExist(users.getUsername(), users.getEmail())) {
+        if (!db.checkIfExist(users.getUsername(), users.getEmail())) {
             //status code 204
             return Response.status(204).entity("user not found!").build();
 
         } else {
             db.updateCustomer(u);
-             return Response.status(200).entity("details updated!").build();
+            return Response.status(200).entity("details updated!").build();
         }
     }
-      //get a details with username
+    //get a details with username
+  @PermitAll
     @GET
     @Path("{Id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -153,12 +157,13 @@ public class UserResource {
         }
 
     }
+  @PermitAll
     @POST
     @Path("/Login")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    // @Produces(MediaType.TEXT_PLAIN)
-    public Response Login(User us)  {
+    @Produces(MediaType.TEXT_PLAIN)
+    //@Produces(MediaType.TEXT_PLAIN)
+    public Response Login(User us) {
         //u = convertJsonStringToLogin(content);
         if (us.getUsername() == null && us.getPassword() == null) {
             return Response.status(400).entity("Please enter username and password !!").build();
@@ -177,16 +182,16 @@ public class UserResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@Produces(MediaType.TEXT_PLAIN)
-    public Response registerUser(User us){
+    public Response registerUser(User us) {
         boolean exist = db.checkIfExist(us.getUsername(), us.getEmail());
         if (us.getFullName() == null && us.getUsername() == null && us.getEmail() == null && us.getPassword() == null) {
             return Response.status(400).entity("Please provide all your details !!").build();
         }
         if (exist) {
             return Response.status(400).entity("account already exist!").build();
-        }else{
-        db.register(us);
-        return Response.status(200).entity("account created").build();
-}
+        } else {
+            db.register(us);
+            return Response.status(200).entity("account created").build();
+        }
     }
 }

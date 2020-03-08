@@ -145,7 +145,7 @@ private static PostDAO ourInstance = new PostDAO();
 
         try {
             conn = getConnection();
-            String query = "SELECT * FROM post where user_id=? ";
+            String query = "SELECT * FROM post where user_id=?";
             ps = conn.prepareStatement(query);
             ps.setInt(1, user);
             rs = ps.executeQuery();
@@ -424,8 +424,13 @@ private static PostDAO ourInstance = new PostDAO();
         return output;
     }
 
+    /**
+     *
+     * @param p
+     * @return
+     */
     @Override
-    public String addPostFile(Post p) {
+    public String addPost(Post p) {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;

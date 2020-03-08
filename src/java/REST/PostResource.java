@@ -49,7 +49,6 @@ public class PostResource {
     @GET
     @Path("/ActivePosts")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
     public List<Post> getActivePosts() {
         List<Post> posts = postDB.getAllActivePosts();
         if (posts == null || posts.isEmpty()) {
@@ -94,19 +93,18 @@ public class PostResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
     }
-    
+
     //create Posts
     @POST
     @Path("/CreatePost")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     //@Produces(MediaType.TEXT_PLAIN)
-    public Response CreatePost(Post post){
-        
-        if (post.getPost_title()==null && post.getPost_desc()==null && post.getUser_id() <1  && post.getCommunity_id() <1) {
-            return Response.status(400).entity("Please provide all your details !!").build();
-        }  
-        postDB.addPostFile(p);
+    public Response CreatePost(Post post) {
+        if (post.getPost_title() == null && post.getPost_desc() == null && post.getUser_id() < 1 && post.getCommunity_id() < 1) {
+            return Response.status(204).entity("Please provide all your details !!").build();
+        }
+        postDB.addPost(p);
         return Response.status(200).entity("Post Added!").build();
 
     }

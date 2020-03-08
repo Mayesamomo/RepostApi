@@ -22,6 +22,6 @@ public interface PostInterface {
 
     String addPostText(Post p);
 
-    String addPostFile(Post p); //do we need this ?
+    String addPost(Post p); //do we need this ?
 
 }

@@ -16,15 +16,14 @@ public class Test {
 
     public static void main(String[] args) {
         UserResource rs = new UserResource();
-        User us = new User("my name","niki","niki@gmail.com","password");
+        User us = new User("Khlaus Michaelson","Khlaus","khlaus@gmail.com","password");
         String reg = "{\n"
                 + "    \"email\": \"anime@gmail.com\",\n"
                 + "    \"fullName\": \"Modric bill\",\n"
                 + "    \"password\": \"password\",\n"
                 + "    \"user_name\": \"mod\"\n"
                 + "}";
-                
-        rs.Login(us);
+        System.out.println(rs.registerUser(us));
     }
 
 }
