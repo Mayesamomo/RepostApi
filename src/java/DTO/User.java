@@ -1,7 +1,8 @@
 package DTO;
+
 import java.util.Objects;
+
 /**
- *
  * @author micha
  */
 
@@ -47,65 +48,65 @@ public class User {
     public User() {
     }
 
-    
+
     public int getId() {
         return Id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public UserType getUserType() {
-        return userType;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public String getDate() {
-        return date;
     }
 
     public void setId(int Id) {
         this.Id = Id;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public UserType getUserType() {
+        return userType;
+    }
+
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public void setDate(String date) {

@@ -1,5 +1,7 @@
 package DAO;
+
 import DTO.Post;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,17 +9,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
  * @author micha
  */
 public class PostDAO extends DAO implements PostInterface {
-private static PostDAO ourInstance = new PostDAO();
- public static PostDAO getInstance() {
+    private static PostDAO ourInstance = new PostDAO();
+
+    public static PostDAO getInstance() {
         return ourInstance;
     }
     //public PostDAO(String database) {
-       // super(database);
-   // }
+    // super(database);
+    // }
 
     @Override
     public ArrayList<Post> getAllPosts() {
@@ -392,7 +394,7 @@ private static PostDAO ourInstance = new PostDAO();
             ps.setString(1, p.getPost_title());
             ps.setString(2, p.getPost_desc());
             ps.setInt(3, p.getUser_id());
-            
+
             ps.setInt(4, p.getCommunity_id());
 
             // Execute the query
@@ -425,7 +427,6 @@ private static PostDAO ourInstance = new PostDAO();
     }
 
     /**
-     *
      * @param p
      * @return
      */

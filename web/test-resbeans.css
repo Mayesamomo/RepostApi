@@ -38,23 +38,26 @@ made subject to such option by the copyright holder.
 Contributor(s):
  */
 
-body{
+body {
     /*font: 10pt Verdana, sans-serif;*/
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
     color: navy;
 }
-.category{
+
+.category {
     cursor: pointer;
     display: block;
 }
-.item{
+
+.item {
     display: none;
     margin-left: 16px;
     color: #000000;
 }
 
-/*div#testinput*/ div#navigation, div#request {
+/*div#testinput*/
+div#navigation, div#request {
     overflow: auto;
     /*width: 500px;*/
 }
@@ -70,12 +73,12 @@ body{
 
 div#navigation {
     height: 20px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 div#request {
     width: 520px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 .outerBorder {
@@ -84,26 +87,26 @@ div#request {
 }
 
 .header {
-    height:30%;
+    height: 30%;
     border: 1px solid #000000;
     background-image: url(images/masthead.png);
 }
 
 .banner {
-    vertical-align:middle;
+    vertical-align: middle;
     padding: 10px;
 }
 
 .subheader {
-    clear:both;
+    clear: both;
     height: 10px;
     color: #FFFFFF;
-    font-size:10px;
+    font-size: 10px;
     padding: 10px;
 }
 
 .subheader div {
-    float:right;
+    float: right;
 }
 
 .main {
@@ -136,106 +139,101 @@ div#request {
     background-color: #FFFFFF;
     color: #000000;
     overflow: auto;
-}       
+}
 
 .tableheader {
     background-color: #54809D;
     color: #FFFFFF;
 }
 
-.col
-{
+.col {
     width: 21%;
     float: left;
     margin-top: 0px;
 }
 
-.resultHeader
-{
+.resultHeader {
     background-color: #164A78;
     color: #FF9933;
     font-family: Arial, Verdana, Helvetica;
     font-size: 11px;
 }
 
-.results
-{
+.results {
     width: 720px;
     margin-left: 0%;
     border: 1px solid #e0e7ec;
     font-family: verdana, arial;
     background-color: #ffffff;
     cellpadding: 10px;
-    font-size:12px;
+    font-size: 12px;
 }
 
-.stext
-{
+.stext {
     color: #000000;
 }
 
 a.tab {
-  background-image: url(images/tbuns.png);
-  border: 1px solid #000000;
-  border-color: #000000 #000000 #ffffff #000000;
-  text-decoration: none;
-  z-index: 100;
-  position: relative;
-  top: 2px;
+    background-image: url(images/tbuns.png);
+    border: 1px solid #000000;
+    border-color: #000000 #000000 #ffffff #000000;
+    text-decoration: none;
+    z-index: 100;
+    position: relative;
+    top: 2px;
 }
 
 a.tab, a.tab:visited {
-  color: #8060b0;
+    color: #8060b0;
 }
 
 a.tab:hover {
-  background-color: #a080d0;
-  border-color: #c0a0f0 #8060b0 #8060b0 #c0a0f0;
-  color: #ffe0ff;
+    background-color: #a080d0;
+    border-color: #c0a0f0 #8060b0 #8060b0 #c0a0f0;
+    color: #ffe0ff;
 }
 
 a.tab.activeTab, a.tab.activeTab:hover, a.tab.activeTab:visited {
-  background-image: url(images/tbsel.png);
-  border-color: #000000 #000000 #ffffff #000000;
-  color: #ffe0ff;
+    background-image: url(images/tbsel.png);
+    border-color: #000000 #000000 #ffffff #000000;
+    color: #ffe0ff;
 }
 
 a.tab.activeTab {
-  padding-bottom: 1px;
-  z-index: 102;
+    padding-bottom: 1px;
+    z-index: 102;
 }
 
-.menu
-{
+.menu {
     margin-top: 0px;
 }
 
 div.tabMain {
-  z-index: 101;
-  /*padding: 0.5em;*/
-  border-style: solid;
-  border-width: 1px;
-  border-color: #80929B;
-  /*width: 540px;*/
-  width: 100%;
-  height: 300px;
+    z-index: 101;
+    /*padding: 0.5em;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #80929B;
+    /*width: 540px;*/
+    width: 100%;
+    height: 300px;
 }
 
 .frame {
-  z-index: 101;
-  /*padding: 0.5em;*/
-  border-style: solid;
-  border-width: 1px;
-  border-color: #80929B;
-  /*width: 540px;*/
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+    z-index: 101;
+    /*padding: 0.5em;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #80929B;
+    /*width: 540px;*/
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 div.tabMain {
-  background-color: #ffffff;
-  position: relative;
+    background-color: #ffffff;
+    position: relative;
 }
 
 /*.frame
@@ -249,71 +247,63 @@ div.tabMain {
 }*/
 
 div.button {
-  background-image: url(images/pbena.png);
-  background-repeat:  repeat-x;
-  color: #000000;
-  border: 1px solid #000000;
-  text-decoration: none;
-  width: 50px;
-  text-align: center;
+    background-image: url(images/pbena.png);
+    background-repeat: repeat-x;
+    color: #000000;
+    border: 1px solid #000000;
+    text-decoration: none;
+    width: 50px;
+    text-align: center;
 }
 
 div.button:hover {
-  background-image: url(images/pbmou.png);
+    background-image: url(images/pbmou.png);
 }
 
 div.button:visited {
-  background-image: url(images/pbsel.png);
-  color: #ffffff;
+    background-image: url(images/pbsel.png);
+    color: #ffffff;
 }
 
-div#tableContent, div#headerInfo, div#structureInfo, div#rawContent, div#monitorContent{
+div#tableContent, div#headerInfo, div#structureInfo, div#rawContent, div#monitorContent {
     background-color: #ffffff;
     height: 300px;
     overflow: auto;
 }
 
-.item1, .item2
-{
-   font-size: 12px;
-   margin-top: -16px;
+.item1, .item2 {
+    font-size: 12px;
+    margin-top: -16px;
 }
 
-.item1
-{
-   margin-left: 50px;
+.item1 {
+    margin-left: 50px;
 }
 
 .item2 {
     margin-left: 45px;
 }
 
-.font10
-{
+.font10 {
     font-size: 10px;
 }
 
-.ml20
-{
-    margin-left:20px;
+.ml20 {
+    margin-left: 20px;
 }
 
-.nodisp
-{
+.nodisp {
     display: none;
 }
 
-.hide
-{
+.hide {
     visibility: hidden;
 }
 
-.wht 
-{
-   color: #FFFFFF
+.wht {
+    color: #FFFFFF
 }
 
-.bld
-{
-   font-weight: bold
+.bld {
+    font-weight: bold
 }

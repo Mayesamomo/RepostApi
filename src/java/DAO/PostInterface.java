@@ -1,9 +1,10 @@
 package DAO;
+
 import DTO.Post;
+
 import java.util.ArrayList;
 
 /**
- *
  * @author micha
  */
 public interface PostInterface {

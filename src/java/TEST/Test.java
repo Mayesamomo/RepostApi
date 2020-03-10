@@ -9,14 +9,13 @@ import DTO.User;
 import REST.UserResource;
 
 /**
- *
  * @author micha
  */
 public class Test {
 
     public static void main(String[] args) {
         UserResource rs = new UserResource();
-        User us = new User("Khlaus Michaelson","Khlaus","khlaus@gmail.com","password");
+        User us = new User("Khlaus Michaelson", "Khlaus", "khlaus@gmail.com", "password");
         String reg = "{\n"
                 + "    \"email\": \"anime@gmail.com\",\n"
                 + "    \"fullName\": \"Modric bill\",\n"

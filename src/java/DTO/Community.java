@@ -1,16 +1,17 @@
 package DTO;
+
 import java.util.Objects;
+
 /**
- *
  * @author micha
  */
 public class Community {
- private int community_id;
- private String community_name;
- private String community_desc;
- private int community_status;
- private int user_id;
- private int memCount;
+    private int community_id;
+    private String community_name;
+    private String community_desc;
+    private int community_status;
+    private int user_id;
+    private int memCount;
 
     public Community(int community_id, String community_name, String community_desc, int community_status, int user_id, int memCount) {
         this.community_id = community_id;
@@ -35,51 +36,49 @@ public class Community {
         this.user_id = user_id;
     }
 
-   
 
-    
     public int getCommunity_id() {
         return community_id;
-    }
-
-    public String getCommunity_name() {
-        return community_name;
-    }
-
-    public String getCommunity_desc() {
-        return community_desc;
-    }
-
-    public int getCommunity_status() {
-        return community_status;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public int getMemCount() {
-        return memCount;
     }
 
     public void setCommunity_id(int community_id) {
         this.community_id = community_id;
     }
 
+    public String getCommunity_name() {
+        return community_name;
+    }
+
     public void setCommunity_name(String community_name) {
         this.community_name = community_name;
+    }
+
+    public String getCommunity_desc() {
+        return community_desc;
     }
 
     public void setCommunity_desc(String community_desc) {
         this.community_desc = community_desc;
     }
 
+    public int getCommunity_status() {
+        return community_status;
+    }
+
     public void setCommunity_status(int community_status) {
         this.community_status = community_status;
     }
 
+    public int getUser_id() {
+        return user_id;
+    }
+
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public int getMemCount() {
+        return memCount;
     }
 
     public void setMemCount(int memCount) {
@@ -132,9 +131,6 @@ public class Community {
     public String toString() {
         return "Community{" + "community_id=" + community_id + ", community_name=" + community_name + ", community_desc=" + community_desc + ", community_status=" + community_status + ", user_id=" + user_id + ", memCount=" + memCount + '}';
     }
- 
- 
- 
- 
-                            
+
+
 }

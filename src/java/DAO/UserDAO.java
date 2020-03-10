@@ -1,5 +1,7 @@
 package DAO;
+
 import DTO.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author micha
  */
 public class UserDAO extends DAO implements UserInterface {
@@ -23,6 +24,17 @@ public class UserDAO extends DAO implements UserInterface {
     //}
 //returns a user with the given user Id
 ///git a specific user with a specific ID
+
+    public static void main(String[] args) {
+        ///User us = new User("Khlaus Michaelson","Khlaus","khlaus@gmail.com","password");
+        UserDAO dao = new UserDAO();
+        String username = "modric";
+        String email = "animegang@gmail.com";
+        String password = "password";
+
+        // System.out.println(dao.register(us));
+
+    }
 
     @Override
     public List<User> getUsers(int id) {
@@ -67,7 +79,7 @@ public class UserDAO extends DAO implements UserInterface {
         return users;
     }
 
-    //returns all users 
+    //returns all users
     @Override
     public ArrayList<User> getAllUsers() {
         Connection con = null;
@@ -220,9 +232,9 @@ public class UserDAO extends DAO implements UserInterface {
                 rs.first();
                 flag = true;
                 return flag;
-            }else{
-               flag = false;
-                return flag; 
+            } else {
+                flag = false;
+                return flag;
             }
         } catch (SQLException e) {
             System.out.println("Exception occured in the login() method: " + e.getMessage());
@@ -275,16 +287,5 @@ public class UserDAO extends DAO implements UserInterface {
             System.out.println("SQL Exception occurred: " + se.getMessage());
             return 0;
         }
-    }
-
-    public static void main(String[] args) {
-         ///User us = new User("Khlaus Michaelson","Khlaus","khlaus@gmail.com","password");
-        UserDAO dao = new UserDAO();
-        String username = "modric";
-        String email = "animegang@gmail.com";
-        String password = "password";
-        
-       // System.out.println(dao.register(us));
-
     }
 }

@@ -6,11 +6,10 @@
 package Exceptions;
 
 /**
- *
  * @author micha
  */
-public class NoSuchAlgorithmException  extends Exception{
-    NoSuchAlgorithmException (String e){
-        super(e);  
+public class NoSuchAlgorithmException extends Exception {
+    NoSuchAlgorithmException(String e) {
+        super(e);
     }
 }

@@ -1,5 +1,7 @@
 package DAO;
+
 import DTO.Community;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,14 +9,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
  * @author micha
  */
 public class CommunityDAO extends DAO implements CommunityInterface {
 
-   // public CommunityDAO(String database) {
-      //  super(database);
-   // }
+    // public CommunityDAO(String database) {
+    //  super(database);
+    // }
 
     @Override
     public ArrayList<Community> getAllCommunitys() {
@@ -201,7 +202,7 @@ public class CommunityDAO extends DAO implements CommunityInterface {
             ps.setString(2, comm.getCommunity_desc());
             ps.setInt(3, comm.getCommunity_id());
             ps.executeUpdate();
-            output="comm updated";
+            output = "comm updated";
 
         } catch (SQLException se) {
             System.out.println("SQL Exception occurred: " + se.getMessage());

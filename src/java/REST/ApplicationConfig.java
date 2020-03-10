@@ -5,11 +5,10 @@
  */
 package REST;
 
-import java.util.Set;
 import javax.ws.rs.core.Application;
+import java.util.Set;
 
 /**
- *
  * @author micha
  */
 @javax.ws.rs.ApplicationPath("webresources")
@@ -36,5 +35,5 @@ public class ApplicationConfig extends Application {
         resources.add(REST.PostResource.class);
         resources.add(REST.UserResource.class);
     }
-    
+
 }

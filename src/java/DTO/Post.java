@@ -1,8 +1,8 @@
 package DTO;
 
 import java.util.Objects;
+
 /**
- *
  * @author micha
  */
 public class Post {
@@ -28,67 +28,67 @@ public class Post {
     }
 
     public Post() {
-        
+
     }
 
     public int getPost_id() {
         return post_id;
     }
 
-    public String getPost_title() {
-        return post_title;
-    }
-
-    public String getPost_desc() {
-        return post_desc;
-    }
-
-    public String getPost_date() {
-        return post_date;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public int getCommunity_id() {
-        return community_id;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public int getPost_status() {
-        return post_status;
-    }
-
     public void setPost_id(int post_id) {
         this.post_id = post_id;
+    }
+
+    public String getPost_title() {
+        return post_title;
     }
 
     public void setPost_title(String post_title) {
         this.post_title = post_title;
     }
 
+    public String getPost_desc() {
+        return post_desc;
+    }
+
     public void setPost_desc(String post_desc) {
         this.post_desc = post_desc;
+    }
+
+    public String getPost_date() {
+        return post_date;
     }
 
     public void setPost_date(String post_date) {
         this.post_date = post_date;
     }
 
+    public int getUser_id() {
+        return user_id;
+    }
+
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public int getCommunity_id() {
+        return community_id;
     }
 
     public void setCommunity_id(int community_id) {
         this.community_id = community_id;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public int getPost_status() {
+        return post_status;
     }
 
     public void setPost_status(int post_status) {
@@ -150,5 +150,5 @@ public class Post {
         return "Post{" + "post_id=" + post_id + ", post_title=" + post_title + ", post_desc=" + post_desc + ", post_date=" + post_date + ", user_id=" + user_id + ", community_id=" + community_id + ", url=" + url + ", post_status=" + post_status + '}';
     }
 
-    
+
 }

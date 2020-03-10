@@ -1,24 +1,26 @@
 package DAO;
+
 import DTO.Comment;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author micha
  */
 public class CommentDAO extends DAO implements CommentInterface {
 
     //public CommentDAO(String database) {
-      //  super(database);
+    //  super(database);
     //}
+
+    public static void main(String[] args) {
+        CommentDAO db = new CommentDAO();
+        System.out.println("all comments = " + db.getPostComments(23));
+    }
 
     @Override
     public List<Comment> getUserComments(int user_id) {
@@ -193,7 +195,7 @@ public class CommentDAO extends DAO implements CommentInterface {
             //Retrieving the result
             rs.next();
             int count = rs.getInt(1);
-            
+
             //System.out.println("Total Row :" + count);
             rs.close();
             st.close();
@@ -204,10 +206,5 @@ public class CommentDAO extends DAO implements CommentInterface {
         }
         return 0;
 
-    }
-
-    public static void main(String[] args) {
-        CommentDAO db = new CommentDAO();
-        System.out.println("all comments = " + db.getPostComments(23));
     }
 }

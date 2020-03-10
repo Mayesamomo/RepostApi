@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 package DTO;
+
 import java.util.Objects;
+
 /**
- *
  * @author micha
  */
 public class Comment {
@@ -34,36 +35,36 @@ public class Comment {
         return comment_id;
     }
 
-    public String getComment_text() {
-        return comment_text;
-    }
-
-    public String getComment_link() {
-        return comment_link;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public int getPost_id() {
-        return post_id;
-    }
-
     public void setComment_id(int comment_id) {
         this.comment_id = comment_id;
+    }
+
+    public String getComment_text() {
+        return comment_text;
     }
 
     public void setComment_text(String comment_text) {
         this.comment_text = comment_text;
     }
 
+    public String getComment_link() {
+        return comment_link;
+    }
+
     public void setComment_link(String comment_link) {
         this.comment_link = comment_link;
     }
 
+    public int getUser_id() {
+        return user_id;
+    }
+
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public int getPost_id() {
+        return post_id;
     }
 
     public void setPost_id(int post_id) {
@@ -112,6 +113,6 @@ public class Comment {
     public String toString() {
         return "Comment{" + "comment_id=" + comment_id + ", comment_text=" + comment_text + ", comment_link=" + comment_link + ", user_id=" + user_id + ", post_id=" + post_id + '}';
     }
-    
+
 
 }

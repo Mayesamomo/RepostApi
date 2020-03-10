@@ -8,27 +8,20 @@ package REST;
 import DAO.UserDAO;
 import DAO.UserInterface;
 import DTO.User;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
-import javax.ws.rs.core.UriInfo;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.Produces;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PUT;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import javax.ws.rs.core.UriInfo;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * REST Web Service
@@ -39,15 +32,14 @@ import org.json.simple.parser.JSONParser;
 @Path("User")
 public class UserResource {
 
-    @Context
-    private HttpServletRequest request;
-   
-    private UriInfo context;
     private final UserInterface db = UserDAO.getInstance();
-    private User u = new User();
-//private final String USERNAME_FORMAT = "[A-Z]+[a-zA-Z]";
+    //private final String USERNAME_FORMAT = "[A-Z]+[a-zA-Z]";
     private final String EMAIL_FORMAT = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     private final String PASSWORD_FORMAT = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,15})";
+    @Context
+    private HttpServletRequest request;
+    private UriInfo context;
+    private User u = new User();
 
     /**
      * Creates a new instance of UserResource
@@ -145,8 +137,9 @@ public class UserResource {
             return Response.status(200).entity("details updated!").build();
         }
     }
+
     //get a details with username
-  @PermitAll
+    @PermitAll
     @GET
     @Path("{Id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -162,7 +155,8 @@ public class UserResource {
         }
 
     }
-  @PermitAll
+
+    @PermitAll
     @POST
     @Path("/Login")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -171,17 +165,17 @@ public class UserResource {
     public Response Login(User us) {
         //u = convertJsonStringToLogin(content);
         if (us.getUsername() == null && us.getPassword() == null) {
-           request.getSession(false);
+            request.getSession(false);
             return Response.status(400).entity("Please enter username and password !!").build();
-             
+
         }
         if (!db.login(us.getUsername(), us.getPassword())) {
-             request.getSession(false);
+            request.getSession(false);
             return Response.status(401).entity("wrong username or password !!").build();
         } else {
             db.login(us.getUsername(), us.getPassword());
             request.getHeader("Autorization");
-            request.setAttribute("use_id",u.getId());
+            request.setAttribute("use_id", u.getId());
             request.getSession(true);
             return Response.status(200).entity("Logged In!").build();
         }

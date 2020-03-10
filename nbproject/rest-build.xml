@@ -2,7 +2,8 @@
 <!--
         *** GENERATED - DO NOT EDIT  ***
         -->
-<project name="RestServer-rest-build" basedir=".." xmlns:webproject3="http://www.netbeans.org/ns/web-project/3" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:webproject1="http://www.netbeans.org/ns/web-project/1" xmlns:jaxrs="http://www.netbeans.org/ns/jax-rs/1">
+<project name="RestServer-rest-build" basedir=".."
+>
     <target name="-check-trim">
         <condition property="do.trim">
             <and>
@@ -23,7 +24,8 @@
         <property name="rest.base.url" value="${client.url}"/>
     </target>
     <target name="test-restbeans" depends="run-deploy,-init-display-browser,-check-trim,-trim-url,-spare-url">
-        <replace file="${restbeans.test.file}" token="${base.url.token}" value="${rest.base.url}||${rest.application.path}"/>
+        <replace file="${restbeans.test.file}" token="${base.url.token}"
+                 value="${rest.base.url}||${rest.application.path}"/>
         <condition property="do.browse-url">
             <istrue value="${display.browser}"/>
         </condition>

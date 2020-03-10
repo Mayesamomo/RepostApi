@@ -6,11 +6,10 @@
 package Exceptions;
 
 /**
- *
  * @author micha
  */
-public class JSONException extends Exception{
-     public JSONException(String s){
-               super(s);  
-     }
+public class JSONException extends Exception {
+    public JSONException(String s) {
+        super(s);
+    }
 }

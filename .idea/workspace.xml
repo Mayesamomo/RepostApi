@@ -2,22 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13f4a29-b40e-4574-a0fd-c5ee79a6ebb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/RepostApi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_api_0_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_impl_0_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_jackson_0_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Filter/JWTTokenNeededFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Filter/JWTTokenNeededFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/ant-deploy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/ant-deploy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/rest-build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/rest-build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newhtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/newhtml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/CommentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/CommentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/CommentInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/CommentInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/CommunityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/CommunityDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/CommunityInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/CommunityInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/PostDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/PostDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/PostInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/PostInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DAO/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DAO/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/AuthenticationDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/AuthenticationDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/Community.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/Community.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/DTO/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/DTO/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Exceptions/JSONException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Exceptions/JSONException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Exceptions/NoSuchAlgorithmException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Exceptions/NoSuchAlgorithmException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/REST/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Utilities/JWebToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/JWebToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/CommentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/CommentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/CommunityResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/CommunityResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/CrossOriginResourceSharingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/CrossOriginResourceSharingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/EchoEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/EchoEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/PostResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/PostResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/REST/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/REST/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/TEST/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/TEST/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/AuthenticationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/AuthenticationUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/KeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/KeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/LoggerProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/LoggerProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/SimpleKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/SimpleKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Utilities/TokenStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Utilities/TokenStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css_master-all.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css_master-all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-resbeans.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-resbeans.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-resbeans.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-resbeans.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test-resbeans.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/test-resbeans.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +61,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1YqYnPb8IV0jOEhXjjC2YS4gNGK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +82,31 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration name="RepostApi []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="true" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -59,6 +119,7 @@
       <updated>1583671757607</updated>
       <workItem from="1583671758972" duration="61000" />
       <workItem from="1583671973829" duration="1449000" />
+      <workItem from="1583778504576" duration="440000" />
     </task>
     <servers />
   </component>
@@ -69,25 +130,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583671810349">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583778911090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583671810349" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583778911090" />
     <state x="400" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1583672008830">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="400" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1583672008830" />
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583778881709">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1583778881709" />
     <state x="371" y="6" key="CommitChangelistDialog2" timestamp="1583675361311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="371" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583675361311" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583778945150">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583778945150" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583778945150">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583778945150" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583778945149">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583778945149" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583778945150">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583778945150" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583672376709">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583672376709" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583671984527">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583778504733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583671984527" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583778504733" />
+    <state x="209" y="32" key="new project wizard" timestamp="1583778556169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1583778556169" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1583778789509">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583778789509" />
   </component>
 </project>

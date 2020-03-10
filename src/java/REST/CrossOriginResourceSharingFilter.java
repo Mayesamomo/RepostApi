@@ -11,7 +11,6 @@ import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.ext.Provider;
 
 /**
- *
  * @author micha
  */
 @Provider
@@ -23,5 +22,5 @@ public class CrossOriginResourceSharingFilter implements ContainerResponseFilter
         response.getHeaders().putSingle("Access-Control-Allow-Methods", "OPTIONS, GET, POST, PUT, DELETE");
         response.getHeaders().putSingle("Access-Control-Allow-Headers", "Content-Type");
     }
-    
+
 }

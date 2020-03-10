@@ -5,16 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
  * @author micha
  */
 public class DAO {
-   //  protected String database;
+    //  protected String database;
 
     //public DAO(String database) {
-     //  this.database = database;
-   // }
-     public Connection getConnection() throws SQLException {
+    //  this.database = database;
+    // }
+    public Connection getConnection() throws SQLException {
         String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/repostit";//+ database;
         String username = "root";
@@ -25,8 +24,8 @@ public class DAO {
             con = DriverManager.getConnection(url, username, password);
 
         } catch (ClassNotFoundException ex) {
-           System.out.println("Connection failed " + ex.getMessage());
-           System.exit(1);
+            System.out.println("Connection failed " + ex.getMessage());
+            System.exit(1);
 
         } catch (SQLException ex2) {
             System.out.println("Connection failed " + ex2.getMessage());
